@@ -72,22 +72,22 @@ void joyce_dprintf(const char *, ...);
 
 void ImcZ80::mainloop(zword ipc, zword isp)
 {
-   register unsigned long tstates = 0;
-   register unsigned int radjust  = 0;
-   register unsigned char ixoriy  = 0, new_ixoriy = 0;
+   unsigned long tstates = 0;
+   unsigned int radjust  = 0;
+   unsigned char ixoriy  = 0, new_ixoriy = 0;
    unsigned char intsample;
-   register unsigned char op;
+   unsigned char op;
    unsigned int int_cycles=m_cycles;
 
 // JCE debugging
 	int trace = 0;
 
-#ifdef DEBUG/*
+#ifdef DEBUG /*
    char flags[9];
    int bit;
    FILE *fp=0;
-   register unsigned short af2=0,bc2=0,de2=0,hl2=0,ix2=0,iy2=0,sp2=0;
-   register unsigned char i2=0;
+   unsigned short af2=0,bc2=0,de2=0,hl2=0,ix2=0,iy2=0,sp2=0;
+   unsigned char i2=0;
    unsigned char *memory=memptr[0];
    struct _next {unsigned char bytes[8];} *next;
    unsigned short BC, DE, HL, AF;

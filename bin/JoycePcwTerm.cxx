@@ -139,8 +139,8 @@ static int drawLine8(unsigned char *bytes, short yoff) /* Draw a PCW line */
 {
 	int x;
 	int touched = 0;
-	register int b;
-	register zbyte v;
+	int b;
+	zbyte v;
 	long yp;
 	zbyte *data = (zbyte *)gl_screen->pixels;
 
@@ -165,8 +165,8 @@ static int drawLine8(unsigned char *bytes, short yoff) /* Draw a PCW line */
 static int drawLine16(unsigned char *bytes, short yoff) /* Draw a PCW line */
 {
 	int x;
-	register int b;
-	register zbyte v;
+	int b;
+	zbyte v;
 	long yp;
 	int touched = 0;
 	zbyte *data = (zbyte *)gl_screen->pixels;
@@ -191,8 +191,8 @@ static int drawLine32(unsigned char *bytes, short yoff) /* Draw a PCW line */
 {
 	int x;
 	int touched = 0;
-	register int b;
-	register zbyte v;
+	int b;
+	zbyte v;
 	long yp;
 	zbyte *data = (zbyte *)gl_screen->pixels;
 
@@ -217,8 +217,8 @@ static int drawLine24(unsigned char *bytes, short yoff) /* Draw a PCW line */
 {
 	int x;
 	int touched = 0;
-	register int b;
-	register zbyte v;
+	int b;
+	zbyte v;
 	long yp;
 	zbyte *data = (zbyte *)gl_screen->pixels;
 
@@ -307,7 +307,7 @@ void JoycePcwTerm::onLoseFocus(void)
 void JoycePcwTerm::drawPcwScr(void)	/* Draw the PCW screen */
 {
 	short y;
-	register int rrvalue;
+	int rrvalue;
 	int bpp;
 	int touched = 0, ltouched = 0;
 	Uint32 pxdb;
@@ -361,7 +361,7 @@ void JoycePcwTerm::drawPcwScr(void)	/* Draw the PCW screen */
 	{
 		for (y = 0; y < m_scrHeight; y++)
 		{
-			register short yy=((y+m_scrOrigin)&0xFF)<<1;
+			short yy=((y+m_scrOrigin)&0xFF)<<1;
 
 			rrvalue=m_rollerRam[yy+1];
 			rrvalue=rrvalue <<8;

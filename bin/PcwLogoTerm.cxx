@@ -468,7 +468,7 @@ zword PcwLogoTerm::get_bmp_record(zword Z80addr, zword recno)
 
 	for (n = 0; n < 128; n++)
 	{
-		register unsigned int m = n + where;
+		unsigned int m = n + where;
 
 		if (m < sizeof(m_hdr1)) 
 			m_sys->m_cpu->storeB(Z80addr++, m_hdr1[m]);

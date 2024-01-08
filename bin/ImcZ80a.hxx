@@ -78,8 +78,8 @@ extern zbyte flashFetch(zbyte *addr);
 
 inline zbyte fetch (zword x) 
 { 
-	register zbyte slot = (x >> 14);
-	register zbyte bank = anneMemIO[slot];
+	zbyte slot = (x >> 14);
+	zbyte bank = anneMemIO[slot];
 	
 	if (bank & 0x80) 
 	{
@@ -91,8 +91,8 @@ inline zbyte fetch (zword x)
 inline zword fetch2(zword x) { return ((fetch((x)+1)<<8)|fetch(x));    }
 inline void store(zword x, zbyte y) 
 { 
-	register zbyte slot = (x >> 14);
-	register zbyte bank = anneMemIO[slot];
+	zbyte slot = (x >> 14);
+	zbyte bank = anneMemIO[slot];
 	
 	if (bank & 0x80) 
 	{

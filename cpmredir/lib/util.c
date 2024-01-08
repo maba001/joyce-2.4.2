@@ -236,7 +236,7 @@ void redir_wr32(cpm_byte *addr, dword v)
 
 dword redir_rd24(cpm_byte *addr)
 {
-	register dword rv = addr[2];
+	dword rv = addr[2];
 	
 	rv = (rv << 8) | addr[1];
 	rv = (rv << 8) | addr[0];
@@ -246,12 +246,12 @@ dword redir_rd24(cpm_byte *addr)
 
 dword redir_rd32(cpm_byte *addr)
 {
-        register dword rv = addr[3];
+    dword rv = addr[3];
 
 	rv = (rv << 8) | addr[2];
-        rv = (rv << 8) | addr[1];
-        rv = (rv << 8) | addr[0];
-        return rv;
+    rv = (rv << 8) | addr[1];
+    rv = (rv << 8) | addr[0];
+    return rv;
 }
 
 
