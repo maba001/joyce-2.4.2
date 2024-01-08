@@ -4,8 +4,12 @@ config.status
 libtool
 Makefile
 stamp-h1
+lib*.a
 *.o
 *.lo
 *.la
 .deps/
 .libs/
+SdlTerm/psf2inc
+SdlTerm/test
+LibDsk/lib/uk_co_demon_seasip_libdsk_*.h
