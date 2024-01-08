@@ -38,7 +38,7 @@ dsk_err_t posix_openob(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_creatalt(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_creatoo(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_creatob(DSK_DRIVER *self, const char *filename);
-dsk_err_t posix_close(DSK_DRIVER *self);
+dsk_err_t posix_close_alternate(DSK_DRIVER *self);
 dsk_err_t posix_read(DSK_DRIVER *self, const DSK_GEOMETRY *geom,
                               void *buf, dsk_pcyl_t cylinder,
                               dsk_phead_t head, dsk_psect_t sector);

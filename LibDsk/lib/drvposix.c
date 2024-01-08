@@ -41,7 +41,7 @@ DRV_CLASS dc_posixalt =
 	"Raw file driver (alternate sides) ",
 	posix_openalt,	/* open */
 	posix_creatalt,	/* create new */
-	posix_close,	/* close */
+	posix_close_alternate,	/* close */
 	posix_read,	/* read sector, working from physical address */
 	posix_write,	/* write sector, working from physical address */
 	posix_format,	/* format track, physical */
@@ -70,7 +70,7 @@ DRV_CLASS dc_posixoo =
 	"Raw file driver (out and out) ",
 	posix_openoo,	/* open */
 	posix_creatoo,	/* create new */
-	posix_close,	/* close */
+	posix_close_alternate,	/* close */
 	posix_read,	/* read sector, working from physical address */
 	posix_write,	/* write sector, working from physical address */
 	posix_format,	/* format track, physical */
@@ -99,7 +99,7 @@ DRV_CLASS dc_posixob =
 	"Raw file driver (out and back) ",
 	posix_openob,	/* open */
 	posix_creatob,	/* create new */
-	posix_close,	/* close */
+	posix_close_alternate,	/* close */
 	posix_read,	/* read sector, working from physical address */
 	posix_write,	/* write sector, working from physical address */
 	posix_format,	/* format track, physical */
@@ -201,7 +201,7 @@ dsk_err_t posix_creatob(DSK_DRIVER *self, const char *filename)
 }
 
 
-dsk_err_t posix_close(DSK_DRIVER *self)
+dsk_err_t posix_close_alternate(DSK_DRIVER *self)
 {
 	POSIX_DSK_DRIVER *pxself;
 
