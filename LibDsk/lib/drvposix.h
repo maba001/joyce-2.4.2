@@ -32,10 +32,10 @@ typedef struct
 	DSK_GEOMETRY *px_export_geom;
 } POSIX_DSK_DRIVER;
 
-dsk_err_t posix_openalt(DSK_DRIVER *self, const char *filename);
+dsk_err_t posix_open_alternate(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_openoo(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_openob(DSK_DRIVER *self, const char *filename);
-dsk_err_t posix_creatalt(DSK_DRIVER *self, const char *filename);
+dsk_err_t posix_create_alternate(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_creatoo(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_creatob(DSK_DRIVER *self, const char *filename);
 dsk_err_t posix_close_alternate(DSK_DRIVER *self);

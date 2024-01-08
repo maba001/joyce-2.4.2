@@ -39,8 +39,8 @@ DRV_CLASS dc_posixalt =
 	NULL,		/* superclass */
 	"raw\0rawalt\0",
 	"Raw file driver (alternate sides) ",
-	posix_openalt,	/* open */
-	posix_creatalt,	/* create new */
+	posix_open_alternate,	/* open */
+	posix_create_alternate,	/* create new */
 	posix_close_alternate,	/* close */
 	posix_read,	/* read sector, working from physical address */
 	posix_write,	/* write sector, working from physical address */
@@ -155,7 +155,7 @@ dsk_err_t posix_open(DSK_DRIVER *self, const char *filename, dsk_sides_t s)
 }
 
 
-dsk_err_t posix_openalt(DSK_DRIVER *self, const char *filename)
+dsk_err_t posix_open_alternate(DSK_DRIVER *self, const char *filename)
 {
 	return posix_open(self, filename, SIDES_ALT);
 }
@@ -185,7 +185,7 @@ dsk_err_t posix_creat(DSK_DRIVER *self, const char *filename, dsk_sides_t s)
 	return DSK_ERR_OK;
 }
 
-dsk_err_t posix_creatalt(DSK_DRIVER *self, const char *filename)
+dsk_err_t posix_create_alternate(DSK_DRIVER *self, const char *filename)
 {
 	return posix_creat(self, filename, SIDES_ALT);
 }
